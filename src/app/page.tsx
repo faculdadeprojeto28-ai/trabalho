@@ -170,9 +170,10 @@ export default function HomePage() {
               <div className="relative mx-auto max-w-md lg:max-w-none">
                 <div className="overflow-hidden rounded-3xl border border-emerald-500/20 shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1541888946425-d0fbb18615f3?auto=format&fit=crop&w=1000&q=80"
+                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
                     alt="Materiais de construção e canteiro de obras sustentável"
                     className="h-[420px] w-full object-cover"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
 

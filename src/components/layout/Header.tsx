@@ -228,6 +228,7 @@ export const Header: React.FC = () => {
                 src={currentUser.avatar_url || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80'}
                 alt={currentUser.full_name}
                 className="h-7 w-7 rounded-full object-cover"
+                referrerPolicy="no-referrer"
               />
               <span className="hidden lg:inline text-xs font-medium text-slate-700 dark:text-slate-200 max-w-[100px] truncate">
                 {currentUser.full_name.split(' ')[0]}
