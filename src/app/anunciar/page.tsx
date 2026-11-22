@@ -596,7 +596,17 @@ export default function PublishListingPage() {
                 <p className="text-xs font-bold text-slate-400 uppercase mb-2">Pré-visualização do Anúncio</p>
                 <div className="overflow-hidden rounded-xl bg-white shadow-sm dark:bg-slate-900">
                   <div className="aspect-4/3 w-full bg-slate-100 dark:bg-slate-800">
-                    <img src={images[0]} alt="" className="h-full w-full object-cover" />
+                    <img
+                      src={images[0] || '/products/indisponivel.svg'}
+                      alt=""
+                      className="h-full w-full object-cover"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.src.includes('indisponivel.svg')) {
+                          target.src = '/products/indisponivel.svg';
+                        }
+                      }}
+                    />
                   </div>
                   <div className="p-3 space-y-1">
                     <span className="text-[10px] font-bold text-emerald-600">{categorySlug}</span>

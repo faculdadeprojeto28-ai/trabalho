@@ -118,9 +118,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 842,
     favorites_count: 67,
     images: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80',
+      '/products/Porcelanato_Marmorizado_Branco.jpg',
     ],
     created_at: '2026-11-10T09:30:00Z',
     updated_at: '2026-11-10T09:30:00Z',
@@ -161,8 +159,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 512,
     favorites_count: 34,
     images: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=1000&q=80',
+      '/products/Cimento_Votoran_50kg.jpg',
     ],
     created_at: '2026-11-12T14:15:00Z',
     updated_at: '2026-11-12T14:15:00Z',
@@ -203,8 +200,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 1240,
     favorites_count: 98,
     images: [
-      'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=80',
+      '/products/Tinta_Suvinil_Fosco_Completo_18L.jpg',
     ],
     created_at: '2026-11-08T11:00:00Z',
     updated_at: '2026-11-08T11:00:00Z',
@@ -246,8 +242,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 2190,
     favorites_count: 210,
     images: [
-      'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&q=80',
+      '/products/Vigas_Peroba_Rosa.jpg',
     ],
     created_at: '2026-11-05T16:20:00Z',
     updated_at: '2026-11-05T16:20:00Z',
@@ -287,8 +282,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 670,
     favorites_count: 45,
     images: [
-      'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80',
+      '/products/Bloco_Concreto_Estrutural.jpg',
     ],
     created_at: '2026-11-11T13:40:00Z',
     updated_at: '2026-11-11T13:40:00Z',
@@ -322,7 +316,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 890,
     favorites_count: 112,
     images: [
-      'https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=1000&q=80',
+      '/products/Mangueira_Azul_Rolo.jpg',
     ],
     created_at: '2026-11-09T18:00:00Z',
     updated_at: '2026-11-09T18:00:00Z',
@@ -356,7 +350,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 430,
     favorites_count: 29,
     images: [
-      'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1000&q=80',
+      '/products/Tubos_Conexoes_PVC_Tigre.jpg',
     ],
     created_at: '2026-11-13T08:15:00Z',
     updated_at: '2026-11-13T08:15:00Z',
@@ -391,7 +385,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 1450,
     favorites_count: 130,
     images: [
-      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80',
+      '/products/Janela_Aluminio_Sasazaki.jpg',
     ],
     created_at: '2026-11-07T10:00:00Z',
     updated_at: '2026-11-07T10:00:00Z',
@@ -425,7 +419,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 980,
     favorites_count: 85,
     images: [
-      'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80',
+      '/products/Bacia_Sanitaria_Deca.jpg',
     ],
     created_at: '2026-11-11T17:30:00Z',
     updated_at: '2026-11-11T17:30:00Z',
@@ -460,7 +454,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 1670,
     favorites_count: 144,
     images: [
-      'https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?auto=format&fit=crop&w=1000&q=80',
+      '/products/Telhas_Termoacusticas_Sanduiche.jpg',
     ],
     created_at: '2026-11-06T15:00:00Z',
     updated_at: '2026-11-06T15:00:00Z',
@@ -494,7 +488,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 560,
     favorites_count: 51,
     images: [
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80',
+      '/products/Soleiras_Granito_Preto_Sao_Gabriel.jpg',
     ],
     created_at: '2026-11-13T12:00:00Z',
     updated_at: '2026-11-13T12:00:00Z',
@@ -528,7 +522,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 730,
     favorites_count: 88,
     images: [
-      'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=1000&q=80',
+      '/products/Fechadura_Digital_Yale.jpg',
     ],
     created_at: '2026-11-10T19:00:00Z',
     updated_at: '2026-11-10T19:00:00Z',
@@ -562,7 +556,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 1120,
     favorites_count: 104,
     images: [
-      'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1000&q=80',
+      '/products/Piso_Vinilico_Tarkett_Carvalho.jpg',
     ],
     created_at: '2026-11-09T14:00:00Z',
     updated_at: '2026-11-09T14:00:00Z',
@@ -596,7 +590,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 810,
     favorites_count: 63,
     images: [
-      'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1000&q=80',
+      '/products/Placa_MDF_Branca.jpg',
     ],
     created_at: '2026-11-08T16:45:00Z',
     updated_at: '2026-11-08T16:45:00Z',
@@ -630,7 +624,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 380,
     favorites_count: 22,
     images: [
-      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80',
+      '/products/Placas_Drywall_ST.jpg',
     ],
     created_at: '2026-11-12T11:20:00Z',
     updated_at: '2026-11-12T11:20:00Z',
@@ -665,7 +659,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 1420,
     favorites_count: 119,
     images: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
+      '/products/Piso_Ceramico_Cinza.jpg',
     ],
     created_at: '2026-11-04T10:10:00Z',
     updated_at: '2026-11-04T10:10:00Z',
@@ -699,7 +693,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 940,
     favorites_count: 76,
     images: [
-      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80',
+      '/products/Porta_Pivotante_Angelim_Pedra.jpg',
     ],
     created_at: '2026-11-11T09:40:00Z',
     updated_at: '2026-11-11T09:40:00Z',
@@ -733,7 +727,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 480,
     favorites_count: 37,
     images: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80',
+      '/products/Argamassa_ACIII_Flex_20kg.jpg',
     ],
     created_at: '2026-11-13T14:50:00Z',
     updated_at: '2026-11-13T14:50:00Z',
@@ -767,7 +761,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 610,
     favorites_count: 53,
     images: [
-      'https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=1000&q=80',
+      '/products/Quadro_Distribuicao_Eletrica_42_Disjuntores.jpg',
     ],
     created_at: '2026-11-09T16:20:00Z',
     updated_at: '2026-11-09T16:20:00Z',
@@ -802,7 +796,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 1350,
     favorites_count: 122,
     images: [
-      'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80',
+      '/products/Torneira_Monocomando_Docol_Gourmet.jpg',
     ],
     created_at: '2026-11-06T11:15:00Z',
     updated_at: '2026-11-06T11:15:00Z',
@@ -836,8 +830,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 1780,
     favorites_count: 165,
     images: [
-      'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=1000&q=80',
+      '/products/Tijolos_Macicos_Demolicao.jpg',
     ],
     created_at: '2026-11-03T14:00:00Z',
     updated_at: '2026-11-03T14:00:00Z',
@@ -872,7 +865,7 @@ export const MOCK_LISTINGS: Listing[] = [
     views_count: 2450,
     favorites_count: 189,
     images: [
-      'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=1000&q=80',
+      '/products/Betoneira_Menegotti_400L.jpg',
     ],
     created_at: '2026-11-02T10:30:00Z',
     updated_at: '2026-11-02T10:30:00Z',
@@ -935,7 +928,7 @@ export const MOCK_PROPOSALS: Proposal[] = [
     id: 'prop-1',
     listing_id: 'prod-4',
     listing_title: 'Vigas de Peroba Rosa Maciça de Demolição Centenária (Lote 12 Peças)',
-    listing_image: 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=400&q=80',
+    listing_image: '/products/Vigas_Peroba_Rosa.jpg',
     buyer_id: 'user-buyer-1',
     buyer_name: 'Eng. Roberto Silva',
     seller_id: 'user-company-1',
@@ -952,7 +945,7 @@ export const MOCK_PROPOSALS: Proposal[] = [
     id: 'prop-2',
     listing_id: 'prod-9',
     listing_title: 'Bacia Sanitária Deca Monte Carlo com Caixa Acoplada Duo',
-    listing_image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80',
+    listing_image: '/products/Bacia_Sanitaria_Deca.jpg',
     buyer_id: 'user-buyer-1',
     buyer_name: 'Eng. Roberto Silva',
     seller_id: 'user-seller-1',
@@ -972,7 +965,7 @@ export const MOCK_CONVERSATIONS: Conversation[] = [
     id: 'conv-1',
     listing_id: 'prod-4',
     listing_title: 'Vigas de Peroba Rosa Maciça de Demolição Centenária (Lote 12 Peças)',
-    listing_image: 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=400&q=80',
+    listing_image: '/products/Vigas_Peroba_Rosa.jpg',
     listing_price: 320.0,
     buyer_id: 'user-buyer-1',
     buyer_name: 'Eng. Roberto Silva',
@@ -986,7 +979,7 @@ export const MOCK_CONVERSATIONS: Conversation[] = [
     id: 'conv-2',
     listing_id: 'prod-3',
     listing_title: 'Tinta Suvinil Fosco Completo Branco Neve Lata 18L (Lacrada)',
-    listing_image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80',
+    listing_image: '/products/Tinta_Suvinil_Fosco_Completo_18L.jpg',
     listing_price: 360.0,
     buyer_id: 'user-buyer-1',
     buyer_name: 'Eng. Roberto Silva',

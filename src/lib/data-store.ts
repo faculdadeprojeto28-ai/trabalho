@@ -114,7 +114,14 @@ export class MarketplaceStore {
       if (storedUser) this.currentUser = JSON.parse(storedUser);
 
       const storedListings = localStorage.getItem(STORAGE_KEYS.LISTINGS);
-      if (storedListings) this.listings = JSON.parse(storedListings);
+      if (storedListings) {
+        const parsed: Listing[] = JSON.parse(storedListings);
+        const freshMap = new Map(MOCK_LISTINGS.map((l) => [l.id, l.images]));
+        this.listings = parsed.map((l) => ({
+          ...l,
+          images: freshMap.get(l.id) || l.images,
+        }));
+      }
 
       const storedOrders = localStorage.getItem(STORAGE_KEYS.ORDERS);
       if (storedOrders) this.orders = JSON.parse(storedOrders);

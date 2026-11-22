@@ -107,9 +107,15 @@ export default function OrderDetailPage() {
           <h3 className="text-xs font-bold uppercase text-slate-400">Item Adquirido</h3>
           <div className="flex items-center gap-3">
             <img
-              src={order.listing.images[0]}
+              src={order.listing.images[0] || '/products/indisponivel.svg'}
               alt=""
               className="h-16 w-16 rounded-xl object-cover border border-slate-200 dark:border-slate-700"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.src.includes('indisponivel.svg')) {
+                  target.src = '/products/indisponivel.svg';
+                }
+              }}
             />
             <div>
               <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white line-clamp-1">

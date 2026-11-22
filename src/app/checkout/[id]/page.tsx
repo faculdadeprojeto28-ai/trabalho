@@ -114,9 +114,15 @@ export default function CheckoutPage() {
 
             <div className="flex items-center gap-4 rounded-xl bg-slate-50 p-3 dark:bg-slate-800">
               <img
-                src={listing.images[0]}
+                src={listing.images[0] || '/products/indisponivel.svg'}
                 alt={listing.title}
                 className="h-16 w-16 rounded-xl object-cover border border-slate-200 dark:border-slate-700"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('indisponivel.svg')) {
+                    target.src = '/products/indisponivel.svg';
+                  }
+                }}
               />
               <div className="flex-1">
                 <span className="text-[10px] font-bold text-emerald-600 uppercase">

@@ -61,9 +61,15 @@ export default function OrdersListPage() {
               <div className="mt-4 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <img
-                    src={order.listing.images[0]}
+                    src={order.listing.images[0] || '/products/indisponivel.svg'}
                     alt=""
                     className="h-14 w-14 rounded-xl object-cover border border-slate-200 dark:border-slate-700"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.includes('indisponivel.svg')) {
+                        target.src = '/products/indisponivel.svg';
+                      }
+                    }}
                   />
                   <div>
                     <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white line-clamp-1">

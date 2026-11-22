@@ -33,11 +33,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ listing }) => {
       <div className="relative aspect-4/3 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
         <Link href={`/anuncio/${listing.id}`} className="block h-full w-full">
           <img
-            src={listing.images[0] || 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=600&q=80'}
+            src={listing.images[0] || '/products/indisponivel.svg'}
             alt={listing.title}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (!target.src.includes('indisponivel.svg')) {
+                target.src = '/products/indisponivel.svg';
+              }
+            }}
           />
         </Link>
 

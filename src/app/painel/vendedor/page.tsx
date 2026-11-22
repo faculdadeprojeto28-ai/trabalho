@@ -234,9 +234,15 @@ export default function SellerDashboardPage() {
                     <td className="p-4">
                       <div className="flex items-center gap-3">
                         <img
-                          src={item.images[0]}
+                          src={item.images[0] || '/products/indisponivel.svg'}
                           alt=""
                           className="h-12 w-12 rounded-xl object-cover border border-slate-200 dark:border-slate-700"
+                          onError={(e) => {
+                            const target = e.currentTarget;
+                            if (!target.src.includes('indisponivel.svg')) {
+                              target.src = '/products/indisponivel.svg';
+                            }
+                          }}
                         />
                         <div>
                           <Link

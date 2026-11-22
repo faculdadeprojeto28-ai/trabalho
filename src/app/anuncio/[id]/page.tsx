@@ -104,9 +104,15 @@ export default function ListingDetailPage() {
           {/* Foto Principal */}
           <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 dark:border-slate-800 dark:bg-slate-900 shadow-md">
             <img
-              src={listing.images[selectedImageIndex] || listing.images[0]}
+              src={listing.images[selectedImageIndex] || listing.images[0] || '/products/indisponivel.svg'}
               alt={listing.title}
               className="h-full w-full object-cover"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.src.includes('indisponivel.svg')) {
+                  target.src = '/products/indisponivel.svg';
+                }
+              }}
             />
 
             {/* Badges Flutuantes */}
@@ -151,7 +157,17 @@ export default function ListingDetailPage() {
                       : 'border-transparent opacity-70 hover:opacity-100'
                   }`}
                 >
-                  <img src={img} alt="" className="h-full w-full object-cover" />
+                  <img
+                    src={img || '/products/indisponivel.svg'}
+                    alt=""
+                    className="h-full w-full object-cover"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.includes('indisponivel.svg')) {
+                        target.src = '/products/indisponivel.svg';
+                      }
+                    }}
+                  />
                 </button>
               ))}
             </div>
