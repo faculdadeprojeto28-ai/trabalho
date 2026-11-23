@@ -348,13 +348,13 @@ export default function CheckoutPage() {
                   <select
                     value={installments}
                     onChange={(e) => setInstallments(Number(e.target.value))}
-                    className="w-full rounded-xl border border-slate-300 bg-white p-2.5 text-xs dark:border-slate-700 dark:bg-slate-900"
+                    className="w-full rounded-xl border border-slate-300 bg-white p-2.5 text-xs text-slate-900 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white"
                   >
-                    <option value={1}>1x de {formatCurrency(totalAmount)} (sem juros)</option>
-                    <option value={2}>2x de {formatCurrency(totalAmount / 2)} (sem juros)</option>
-                    <option value={3}>3x de {formatCurrency(totalAmount / 3)} (sem juros)</option>
-                    <option value={6}>6x de {formatCurrency(totalAmount / 6)} (sem juros)</option>
-                    <option value={12}>12x de {formatCurrency(totalAmount / 12)}</option>
+                    <option value={1} className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">1x de {formatCurrency(totalAmount)} (sem juros)</option>
+                    <option value={2} className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">2x de {formatCurrency(totalAmount / 2)} (sem juros)</option>
+                    <option value={3} className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">3x de {formatCurrency(totalAmount / 3)} (sem juros)</option>
+                    <option value={6} className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">6x de {formatCurrency(totalAmount / 6)} (sem juros)</option>
+                    <option value={12} className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">12x de {formatCurrency(totalAmount / 12)}</option>
                   </select>
                 </div>
               </div>

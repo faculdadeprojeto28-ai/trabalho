@@ -37,9 +37,15 @@ export const Header: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Verifica tema
-    const isDarkMode = document.documentElement.classList.contains('dark');
-    setIsDark(isDarkMode);
+    // Verifica tema salvo ou classe existente
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+      document.documentElement.classList.add('dark');
+      setIsDark(true);
+    } else {
+      document.documentElement.classList.remove('dark');
+      setIsDark(false);
+    }
   }, []);
 
   const toggleTheme = () => {
@@ -47,8 +53,10 @@ export const Header: React.FC = () => {
     setIsDark(nextDark);
     if (nextDark) {
       document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
   };
 

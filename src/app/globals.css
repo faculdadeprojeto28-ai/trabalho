@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --background: #f8fafc;
@@ -47,6 +49,20 @@
     --input: #1e293b;
     --ring: #10b981;
   }
+}
+
+input, select, textarea {
+  color: inherit;
+}
+
+select option {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.dark select option {
+  background-color: #1e293b;
+  color: #f8fafc;
 }
 
 body {

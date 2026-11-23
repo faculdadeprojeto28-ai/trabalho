@@ -59,7 +59,7 @@ export default function PublishListingPage() {
 
   // Etapa 4: Fotografias
   const [images, setImages] = useState<string[]>([
-    'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1000&q=80',
+    '/products/Porcelanato_Marmorizado_Branco.jpg',
   ]);
   const [imageUrlInput, setImageUrlInput] = useState('');
 
@@ -129,7 +129,7 @@ export default function PublishListingPage() {
       shipping_notes: shippingNotes,
       status: 'ativo',
       is_featured: false,
-      images: images.length > 0 ? images : ['https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1000&q=80'],
+      images: images.length > 0 ? images : ['/products/Porcelanato_Marmorizado_Branco.jpg'],
     });
 
     // Confetti de comemoração
@@ -196,7 +196,7 @@ export default function PublishListingPage() {
       </div>
 
       {/* Formulário Dividido em Etapas */}
-      <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10 shadow-lg dark:border-slate-800 dark:bg-slate-900">
+      <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-10 shadow-xl dark:border-slate-700/80 dark:bg-slate-900/95">
         {/* ETAPA 1: INFORMAÇÕES BÁSICAS */}
         {currentStep === 1 && (
           <div className="space-y-6">
@@ -231,7 +231,7 @@ export default function PublishListingPage() {
             )}
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                 Título do Anúncio *
               </label>
               <input
@@ -240,22 +240,22 @@ export default function PublishListingPage() {
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="Ex: Porcelanato Portobello 60x120cm Bianco Di Lucca (Lote 45m²)"
                 required
-                className="w-full rounded-xl border border-slate-300 p-3 text-sm font-semibold focus:border-emerald-500 focus:outline-hidden dark:border-slate-700 dark:bg-slate-800"
+                className="w-full rounded-xl border border-slate-300 bg-white p-3 text-sm font-semibold text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-400"
               />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Categoria do Produto *
                 </label>
                 <select
                   value={categorySlug}
                   onChange={(e) => setCategorySlug(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 p-3 text-xs dark:border-slate-700 dark:bg-slate-800"
+                  className="w-full rounded-xl border border-slate-300 bg-white p-3 text-xs font-semibold text-slate-900 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white"
                 >
                   {CATEGORIES.map((c) => (
-                    <option key={c.id} value={c.slug}>
+                    <option key={c.id} value={c.slug} className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">
                       {c.name}
                     </option>
                   ))}
@@ -263,25 +263,25 @@ export default function PublishListingPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Estado de Conservação *
                 </label>
                 <select
                   value={condition}
                   onChange={(e) => setCondition(e.target.value as ListingCondition)}
-                  className="w-full rounded-xl border border-slate-300 p-3 text-xs dark:border-slate-700 dark:bg-slate-800"
+                  className="w-full rounded-xl border border-slate-300 bg-white p-3 text-xs font-semibold text-slate-900 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white"
                 >
-                  <option value="novo">Novo (lacrado/sem uso)</option>
-                  <option value="sobra_de_obra">Sobra de Obra (aberto/intacto)</option>
-                  <option value="seminovo">Seminovo (usado em showroom/pouco tempo)</option>
-                  <option value="reutilizavel">Reutilizável / Madeira ou Tijolo de Demolição</option>
+                  <option value="novo" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Novo (lacrado/sem uso)</option>
+                  <option value="sobra_de_obra" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Sobra de Obra (aberto/intacto)</option>
+                  <option value="seminovo" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Seminovo (usado em showroom/pouco tempo)</option>
+                  <option value="reutilizavel" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Reutilizável / Madeira ou Tijolo de Demolição</option>
                 </select>
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Marca / Fabricante (opcional)
                 </label>
                 <input
@@ -289,12 +289,12 @@ export default function PublishListingPage() {
                   value={brand}
                   onChange={(e) => setBrand(e.target.value)}
                   placeholder="Ex: Portobello, Suvinil, Tigre, Votoran..."
-                  className="w-full rounded-xl border border-slate-300 p-3 text-xs dark:border-slate-700 dark:bg-slate-800"
+                  className="w-full rounded-xl border border-slate-300 bg-white p-3 text-xs font-medium text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-400"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Modelo ou Linha (opcional)
                 </label>
                 <input
@@ -302,13 +302,13 @@ export default function PublishListingPage() {
                   value={model}
                   onChange={(e) => setModel(e.target.value)}
                   placeholder="Ex: Polido 60x120, CP-II, Soldável..."
-                  className="w-full rounded-xl border border-slate-300 p-3 text-xs dark:border-slate-700 dark:bg-slate-800"
+                  className="w-full rounded-xl border border-slate-300 bg-white p-3 text-xs font-medium text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-400"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                 Descrição Detalhada do Material *
               </label>
               <textarea
@@ -317,7 +317,7 @@ export default function PublishListingPage() {
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Informe o estado de armazenamento, se as caixas estão secas, lote de tonalidade, motivo da sobra..."
                 required
-                className="w-full rounded-xl border border-slate-300 p-3 text-xs leading-relaxed dark:border-slate-700 dark:bg-slate-800"
+                className="w-full rounded-xl border border-slate-300 bg-white p-3 text-xs leading-relaxed text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-400"
               />
             </div>
           </div>
@@ -332,7 +332,7 @@ export default function PublishListingPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Quantidade Disponível *
                 </label>
                 <input
@@ -342,34 +342,34 @@ export default function PublishListingPage() {
                   value={quantity}
                   onChange={(e) => setQuantity(Number(e.target.value))}
                   required
-                  className="w-full rounded-xl border border-slate-300 p-3 text-sm font-bold dark:border-slate-700 dark:bg-slate-800"
+                  className="w-full rounded-xl border border-slate-300 bg-white p-3 text-sm font-bold text-slate-900 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Unidade de Medida *
                 </label>
                 <select
                   value={unitMeasure}
                   onChange={(e) => setUnitMeasure(e.target.value as UnitMeasure)}
-                  className="w-full rounded-xl border border-slate-300 p-3 text-xs font-semibold dark:border-slate-700 dark:bg-slate-800"
+                  className="w-full rounded-xl border border-slate-300 bg-white p-3 text-xs font-semibold text-slate-900 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white"
                 >
-                  <option value="m2">m² (Metro Quadrado)</option>
-                  <option value="unidade">Unidade (peça)</option>
-                  <option value="saco">Saco</option>
-                  <option value="caixa">Caixa</option>
-                  <option value="lote">Lote Fechado</option>
-                  <option value="m3">m³ (Metro Cúbico)</option>
-                  <option value="kg">kg (Quilograma)</option>
-                  <option value="litro">Litro</option>
+                  <option value="m2" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">m² (Metro Quadrado)</option>
+                  <option value="unidade" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Unidade (peça)</option>
+                  <option value="saco" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Saco</option>
+                  <option value="caixa" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Caixa</option>
+                  <option value="lote" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Lote Fechado</option>
+                  <option value="m3" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">m³ (Metro Cúbico)</option>
+                  <option value="kg" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">kg (Quilograma)</option>
+                  <option value="litro" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Litro</option>
                 </select>
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Preço de Venda por {unitMeasure} (R$) *
                 </label>
                 <div className="relative">
@@ -382,13 +382,13 @@ export default function PublishListingPage() {
                     onChange={(e) => setCurrentPrice(Number(e.target.value))}
                     placeholder="0,00"
                     required
-                    className="w-full rounded-xl border border-slate-300 p-3 pl-10 text-base font-black text-emerald-600 focus:border-emerald-500 dark:border-slate-700 dark:bg-slate-800 dark:text-emerald-400"
+                    className="w-full rounded-xl border border-slate-300 bg-white p-3 pl-10 text-base font-black text-emerald-600 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-emerald-400 dark:placeholder:text-slate-400"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Preço Original de Loja (R$ - opcional)
                 </label>
                 <div className="relative">
@@ -399,10 +399,10 @@ export default function PublishListingPage() {
                     value={originalPrice}
                     onChange={(e) => setOriginalPrice(Number(e.target.value))}
                     placeholder="Ex: 150,00"
-                    className="w-full rounded-xl border border-slate-300 p-3 pl-10 text-sm dark:border-slate-700 dark:bg-slate-800"
+                    className="w-full rounded-xl border border-slate-300 bg-white p-3 pl-10 text-sm font-semibold text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-400"
                   />
                 </div>
-                <p className="text-[10px] text-slate-400 mt-1">
+                <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">
                   Utilizado para destacar o percentual de desconto economizado pelo comprador.
                 </p>
               </div>
@@ -433,7 +433,7 @@ export default function PublishListingPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Cidade *
                 </label>
                 <input
@@ -441,12 +441,12 @@ export default function PublishListingPage() {
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
                   required
-                  className="w-full rounded-xl border border-slate-300 p-3 text-xs dark:border-slate-700 dark:bg-slate-800"
+                  className="w-full rounded-xl border border-slate-300 bg-white p-3 text-xs font-semibold text-slate-900 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Estado (UF) *
                 </label>
                 <input
@@ -455,30 +455,30 @@ export default function PublishListingPage() {
                   value={state}
                   onChange={(e) => setState(e.target.value.toUpperCase())}
                   required
-                  className="w-full rounded-xl border border-slate-300 p-3 text-xs uppercase font-bold dark:border-slate-700 dark:bg-slate-800"
+                  className="w-full rounded-xl border border-slate-300 bg-white p-3 text-xs uppercase font-bold text-slate-900 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                   Bairro ou Região
                 </label>
                 <input
                   type="text"
                   value={neighborhood}
                   onChange={(e) => setNeighborhood(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 p-3 text-xs dark:border-slate-700 dark:bg-slate-800"
+                  className="w-full rounded-xl border border-slate-300 bg-white p-3 text-xs font-semibold text-slate-900 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white"
                 />
               </div>
             </div>
 
             <div className="space-y-3 pt-2">
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300">
+              <label className="block text-xs font-bold text-slate-700 dark:text-slate-200">
                 Modalidades Disponíveis
               </label>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <label className="flex items-start gap-3 rounded-2xl border border-slate-200 p-4 cursor-pointer hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800">
+                <label className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4 cursor-pointer hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800/60 dark:hover:bg-slate-800">
                   <input
                     type="checkbox"
                     checked={pickupAvailable}
@@ -487,11 +487,11 @@ export default function PublishListingPage() {
                   />
                   <div className="text-xs">
                     <strong className="block text-slate-800 dark:text-white">Retirada no Local (Grátis)</strong>
-                    <span className="text-slate-500">O comprador retira no canteiro ou depósito.</span>
+                    <span className="text-slate-500 dark:text-slate-400">O comprador retira no canteiro ou depósito.</span>
                   </div>
                 </label>
 
-                <label className="flex items-start gap-3 rounded-2xl border border-slate-200 p-4 cursor-pointer hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800">
+                <label className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4 cursor-pointer hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800/60 dark:hover:bg-slate-800">
                   <input
                     type="checkbox"
                     checked={deliveryAvailable}
@@ -500,14 +500,14 @@ export default function PublishListingPage() {
                   />
                   <div className="text-xs">
                     <strong className="block text-slate-800 dark:text-white">Entrega Disponível</strong>
-                    <span className="text-slate-500">Frete próprio ou transportadora combinada.</span>
+                    <span className="text-slate-500 dark:text-slate-400">Frete próprio ou transportadora combinada.</span>
                   </div>
                 </label>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
                 Instruções de Acesso para Carregamento
               </label>
               <textarea
@@ -515,7 +515,7 @@ export default function PublishListingPage() {
                 value={shippingNotes}
                 onChange={(e) => setShippingNotes(e.target.value)}
                 placeholder="Ex: Local possui doca para caminhões, ajudamos no carregamento..."
-                className="w-full rounded-xl border border-slate-300 p-3 text-xs dark:border-slate-700 dark:bg-slate-800"
+                className="w-full rounded-xl border border-slate-300 bg-white p-3 text-xs leading-relaxed text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-400"
               />
             </div>
           </div>
@@ -528,12 +528,12 @@ export default function PublishListingPage() {
               Passo 4: Fotos do Material
             </h2>
 
-            <div className="rounded-2xl border-2 border-dashed border-slate-300 p-8 text-center dark:border-slate-700">
+            <div className="rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50/50 p-8 text-center dark:border-slate-700 dark:bg-slate-800/40">
               <Camera className="mx-auto h-10 w-10 text-emerald-600 mb-2" />
               <h3 className="text-sm font-bold text-slate-800 dark:text-slate-100">
                 Adicione fotos reais do material
               </h3>
-              <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-sm mx-auto">
                 Anúncios com fotos nítidas vendem até 4x mais rápido. Inclua fotos das embalagens e lote.
               </p>
 
@@ -544,7 +544,7 @@ export default function PublishListingPage() {
                   value={imageUrlInput}
                   onChange={(e) => setImageUrlInput(e.target.value)}
                   placeholder="Cole o link da foto (URL)..."
-                  className="w-full rounded-xl border border-slate-300 p-2.5 text-xs dark:border-slate-700 dark:bg-slate-800"
+                  className="w-full rounded-xl border border-slate-300 bg-white p-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-400"
                 />
                 <button
                   type="button"

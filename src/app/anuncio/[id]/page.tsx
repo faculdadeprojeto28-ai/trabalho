@@ -528,12 +528,12 @@ export default function ListingDetailPage() {
                   <select
                     value={reportReason}
                     onChange={(e) => setReportReason(e.target.value)}
-                    className="w-full rounded-xl border border-slate-200 p-2.5 text-xs dark:border-slate-700 dark:bg-slate-800"
+                    className="w-full rounded-xl border border-slate-200 bg-white p-2.5 text-xs text-slate-900 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white"
                   >
-                    <option value="produto_enganoso">Material não condiz com as fotos</option>
-                    <option value="preco_abusivo">Preço enganoso ou fraudulento</option>
-                    <option value="contato_indevido">Tentativa de golpe ou pagamento fora da plataforma</option>
-                    <option value="produto_proibido">Material ilícito ou danificado sem utilidade</option>
+                    <option value="produto_enganoso" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Material não condiz com as fotos</option>
+                    <option value="preco_abusivo" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Preço enganoso ou fraudulento</option>
+                    <option value="contato_indevido" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Tentativa de golpe ou pagamento fora da plataforma</option>
+                    <option value="produto_proibido" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Material ilícito ou danificado sem utilidade</option>
                   </select>
                 </div>
 
@@ -547,7 +547,7 @@ export default function ListingDetailPage() {
                     onChange={(e) => setReportDetails(e.target.value)}
                     placeholder="Descreva o que ocorreu..."
                     required
-                    className="w-full rounded-xl border border-slate-200 p-2.5 text-xs dark:border-slate-700 dark:bg-slate-800"
+                    className="w-full rounded-xl border border-slate-200 bg-white p-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-400"
                   />
                 </div>
 

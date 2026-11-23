@@ -85,12 +85,12 @@ export default function PrivacyPage() {
             <select
               value={requestType}
               onChange={(e) => setRequestType(e.target.value)}
-              className="w-full rounded-xl border border-slate-300 bg-white p-2.5 text-xs dark:border-slate-700 dark:bg-slate-900"
+              className="w-full rounded-xl border border-slate-300 bg-white p-2.5 text-xs text-slate-900 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-hidden dark:border-slate-600 dark:bg-slate-800 dark:text-white"
             >
-              <option value="acesso">Acessar todos os meus dados armazenados</option>
-              <option value="correcao">Corrigir dados cadastrais incorretos</option>
-              <option value="exclusao">Excluir permanentemente minha conta e dados (Direito ao Esquecimento)</option>
-              <option value="portabilidade">Portabilidade de dados para outro serviço</option>
+              <option value="acesso" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Acessar todos os meus dados armazenados</option>
+              <option value="correcao" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Corrigir dados cadastrais incorretos</option>
+              <option value="exclusao" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Excluir permanentemente minha conta e dados (Direito ao Esquecimento)</option>
+              <option value="portabilidade" className="bg-white text-slate-900 dark:bg-slate-800 dark:text-white">Portabilidade de dados para outro serviço</option>
             </select>
           </div>
 
